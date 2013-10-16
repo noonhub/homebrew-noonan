@@ -7,8 +7,8 @@ class Kafka < Formula
   sha1 'd7a81829929197905adfc07573dc4a91cdab3857'
 
   def install
-    prefix.install %w(bin config libs kafka_2.8.0-0.8.0-beta1.jar)
+    prefix.install Dir['*']
 
-    bin.install_symlink "/usr/local/bin"
+    inreplace "#{prefix}/bin/kafka-run-class.sh", 'base_dir=$(dirname $0)/..', "base_dir=/usr/local/Cellar/kafka/#{version}/"
   end
 end
