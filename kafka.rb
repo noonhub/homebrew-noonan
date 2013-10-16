@@ -11,4 +11,11 @@ class Kafka < Formula
 
     inreplace "#{prefix}/bin/kafka-run-class.sh", 'base_dir=$(dirname $0)/..', "base_dir=/usr/local/Cellar/kafka/#{version}/"
   end
+
+  def caveats
+    <<-EOS.undent
+      put the following in your bash shell before running
+      export KAFKA_HOME=#{prefix}
+    EOS
+  end
 end

@@ -17,10 +17,6 @@ class KafkaSrc < Formula
     "kafka-server-start.sh #{libexec}/config/server.properties"
   end
 
-end
-
-
-
   def plist
     <<-EOS.undent
       <?xml version="1.0" encoding="UTF-8"?>
@@ -51,3 +47,6 @@ end
     EOS
   end
 end
+
+
+
