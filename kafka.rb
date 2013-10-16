@@ -9,7 +9,11 @@ class Kafka < Formula
   def install
     prefix.install Dir['*']
 
-    inreplace "#{prefix}/bin/kafka-run-class.sh", 'base_dir=$(dirname $0)/..', "base_dir=/usr/local/Cellar/kafka/#{version}/"
+    inreplace "#{bin}/kafka-run-class.sh", 'base_dir=$(dirname $0)/..', "base_dir=/usr/local/Cellar/kafka/#{version}/"
+    cd "#{prefix}/config" do
+      inreplace "log4j.properties", "File=", "File=/tmp/kafka-logs/"
+    end
+
   end
 
   def caveats
