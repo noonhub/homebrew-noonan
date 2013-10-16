@@ -1,8 +1,11 @@
 homebrew-noonan
 ===============
 
-My Keg for homebrew
+Noonan's homebrew keg
 
-#How Do I Tap Noonan's Keg#
+Installing Formulae
+---------------------
 
-`brew tap noonhub/noonan`
+First tap the keg `brew tap noonhub/noonan`
+
+Install formulae `brew install foo` or `brew install noonan/foo
