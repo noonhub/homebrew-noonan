@@ -2,9 +2,9 @@ require 'formula'
 
 class Kafka < Formula
   homepage 'http://http://kafka.apache.org'
-  url 'https://dist.apache.org/repos/dist/release/kafka/kafka_2.8.0-0.8.0-beta1.tgz'
-  version '2.0.8.0-beta1'
-  sha1 'd7a81829929197905adfc07573dc4a91cdab3857'
+  url 'https://dist.apache.org/repos/dist/release/kafka/0.8.1.1/kafka_2.10-0.8.1.1.tgz'
+  version '0.8.1.1'
+  sha1 '7288a43bb0732789ff0d76d820fc7f40553854fe'
 
   def install
     prefix.install Dir['*']
